@@ -1,0 +1,64 @@
+# 👉 Node Modülleri
+node_modules/
+
+# 👉 Ortam Değişkenleri
+.env
+.env.local
+.env.test
+
+# 👉 Log Dosyaları
+logs/
+*.log
+debug.log
+
+# 👉 Yüklenen Dosyalar / Geçici İçerikler
+uploads/
+tmp/
+*.tmp
+*.bak
+
+# 👉 Sistem Dosyaları (Windows / Mac)
+.DS_Store
+Thumbs.db
+
+# 👉 Sertifika / Anahtar Dosyaları (Güvenlik Riski)
+*.pem
+*.key
+
+# 👉 Test & Coverage Araçları
+coverage/
+.jest/
+.nyc_output/
+
+# 👉 Editör Ayarları (VS Code, Visual Studio, JetBrains, vb.)
+.vscode/
+.idea/
+*.suo
+*.ntvs_analysis.dat
+*.njsproj
+*.sln
+*.psess
+*.user
+*.vs/
+*.code-workspace
+
+# 👉 Veritabanı Dosyaları (Yerel - SQLite vs.)
+*.sqlite
+*.db
+
+# 👉 Derleme Önbellekleri ve Sistem Klasörleri
+.cache/
+dist/
+build/
+
+# 👉 Arşiv Dosyaları / Yedekler
+*.zip
+*.rar
+*.7z
+
+# 👉 Geçici Kaydedilen Belgeler / Bellek İzi
+*.trace
+*.swp
+
+# 👉 Git Yöneticisi Tarafından Oluşan Dosyalar (Çakışma riski)
+*.orig
