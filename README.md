@@ -1,5 +1,8 @@
 # Backend Journey for a Website
 
+![Backend](https://img.shields.io/badge/backend-Express.js-blue?style=flat-square)
+![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)
+![Version](https://img.shields.io/badge/version-0.1.0-lightgrey?style=flat-square)
 This project was created to build the backend system for a website I'm developing, step by step.  
 So far, I’ve set up the core structure using Express.js — including the route, controller, service, and model layers.  
 MongoDB integration is complete, JSON responses have been tested, and API endpoints for displaying user data have been defined.

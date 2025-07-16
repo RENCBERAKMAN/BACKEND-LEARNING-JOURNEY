@@ -1,5 +1,9 @@
 # Sitenin Backend Yolculuğu
+# Sitenin Backend Yolculuğu
 
+![Backend](https://img.shields.io/badge/backend-Express.js-blue?style=flat-square)
+![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)
+![Version](https://img.shields.io/badge/version-0.1.0-lightgrey?style=flat-square)
 Bu proje, geliştirmekte olduğum bir web sitesinin backend tarafını adım adım kurmak için oluşturuldu.  
 Şu ana kadar Express.js ile temel dosya yapısı oluşturuldu: route, controller, service ve model zinciri kuruldu.  
 MongoDB bağlantısı sağlandı, JSON response'larla testler yapıldı ve kullanıcı verisini gösterecek API endpoint'leri tanımlandı.
