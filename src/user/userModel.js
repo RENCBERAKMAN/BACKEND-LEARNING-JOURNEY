@@ -1,21 +1,47 @@
-// Geçici örnek veri — veritabanı olmadan çalışır
-const fakeUserList = [
-  { id: 1, name: "Ahmet", role: "admin" },
-  { id: 2, name: "Zeynep", role: "member" },
-  { id: 3, name: "Kerem", role: "guest" },
-];
+const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 
-async function fetchUserList() {
-  return fakeUserList;
-}
+// Kullanıcı şeması
+const userSchema = new mongoose.Schema({
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  verifyCode: {
+    type: String,
+    default: null,
+  },
+  verifyCodeCreatedAt: {
+    type: Date,
+    default: null,
+  },
+  isVerified: {
+    type: Boolean,
+    default: false,
+  },
+});
 
-async function createUser(data) {
-  const newUser = {
-    id: fakeUserList.length + 1,
-    ...data,
-  };
-  fakeUserList.push(newUser);
-  return newUser;
-}
+// Şifreyi kaydetmeden önce hashle
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) return next();
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
+  next();
+});
 
-module.exports = { fetchUserList, createUser };
+// Şifreyi karşılaştır
+userSchema.methods.comparePassword = async function (candidatePassword) {
+  return bcrypt.compare(candidatePassword, this.password);
+};
+
+module.exports = mongoose.model("User", userSchema);
