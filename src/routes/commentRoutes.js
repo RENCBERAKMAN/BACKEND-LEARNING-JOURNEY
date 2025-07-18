@@ -7,6 +7,7 @@ const { protect } = require("../middlewares/authMiddleware");
 router.post("/:postId", protect, addComment);
 
 // Yorumları listeleme → herkese açık
+// Dil filtresi desteklenir: /comments/:postId?lang=tr
 router.get("/:postId", getComments);
 
 // Yorum beğenme → sadece giriş yapmış kullanıcılar

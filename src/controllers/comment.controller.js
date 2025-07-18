@@ -3,7 +3,7 @@ const Comment = require("../models/comment.model");
 // Yorum ekleme (sadece giriş yapmış kullanıcılar)
 exports.addComment = async (req, res) => {
   try {
-    const { content } = req.body;
+    const { content, title, language, parentCommentId } = req.body;
     const { postId } = req.params;
 
     // İçerik boşsa reddet
@@ -16,6 +16,9 @@ exports.addComment = async (req, res) => {
       postId,
       user: req.user._id, // protect middleware sayesinde erişiyoruz
       content,
+      title: title || "",
+      language: language || "tr",
+      parentCommentId: parentCommentId || null,
     });
 
     res.status(201).json({
@@ -32,8 +35,14 @@ exports.addComment = async (req, res) => {
 exports.getComments = async (req, res) => {
   try {
     const { postId } = req.params;
+    const { lang } = req.query; // dil filtresi (isteğe bağlı)
 
-    const comments = await Comment.find({ postId })
+    const filter = { postId };
+    if (lang) {
+      filter.language = lang; // dil filtresi uygula
+    }
+
+    const comments = await Comment.find(filter)
       .populate("user", "username email") // kullanıcı bilgilerini ekle
       .sort({ createdAt: -1 }); // en yeni yorumlar en üstte
 
