@@ -21,9 +21,6 @@ My goal is to work with advanced architectures like microservices, and strengthe
 - VS Code  
 - Git & GitHub  
 
-<p align="center">
-  <img src="https://media.giphy.com/media/3o7bu3XilJ5BOiSGic/giphy.gif" alt="Node.js coding animation" width="400" />
-</p>
 
 <p align="center">
   <img src="https://cdn.iconscout.com/icon/free/png-256/mongodb-4-1175139.png" alt="MongoDB Logo" width="80" />
