@@ -64,3 +64,6 @@ My goal is to work with advanced architectures like microservices, and strengthe
 This project is part of my backend learning journey.  
 I’m progressing on my own, aiming to build systems through both architectural and technical understanding.  
 Every step is tracked through GitHub, and I'm building a structure that could eventually support larger, more complex projects.
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=footer&text=Thanks%20for%20visiting!%20🚀&fontSize=30&fontColor=ffffff" />
+</p>
