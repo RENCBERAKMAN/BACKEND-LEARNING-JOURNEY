@@ -1,64 +1,67 @@
-# 👉 Node Modülleri
-node_modules/
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
 
-# 👉 Ortam Değişkenleri
+# Gradle
+.gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Java
+*.class
+*.jar
+*.war
+
+# Logs
+*.log
+logs/
+log/
+
+# Environment
 .env
 .env.local
-.env.test
+.env.*.local
 
-# 👉 Log Dosyaları
-logs/
-*.log
-debug.log
+# IDEs
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-# 👉 Yüklenen Dosyalar / Geçici İçerikler
-uploads/
-tmp/
-*.tmp
-*.bak
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 
-# 👉 Sistem Dosyaları (Windows / Mac)
+# OS artifacts
 .DS_Store
 Thumbs.db
 
-# 👉 Sertifika / Anahtar Dosyaları (Güvenlik Riski)
-*.pem
-*.key
-
-# 👉 Test & Coverage Araçları
-coverage/
-.jest/
-.nyc_output/
-
-# 👉 Editör Ayarları (VS Code, Visual Studio, JetBrains, vb.)
-.vscode/
-.idea/
-*.suo
-*.ntvs_analysis.dat
-*.njsproj
-*.sln
-*.psess
-*.user
-*.vs/
-*.code-workspace
-
-# 👉 Veritabanı Dosyaları (Yerel - SQLite vs.)
-*.sqlite
-*.db
-
-# 👉 Derleme Önbellekleri ve Sistem Klasörleri
-.cache/
-dist/
-build/
-
-# 👉 Arşiv Dosyaları / Yedekler
-*.zip
-*.rar
-*.7z
-
-# 👉 Geçici Kaydedilen Belgeler / Bellek İzi
-*.trace
+# Swap files
 *.swp
+*.swo
 
-# 👉 Git Yöneticisi Tarafından Oluşan Dosyalar (Çakışma riski)
+# Misc
+*.bak
+*.tmp
+*.old
 *.orig
+*.rej
+
+# Node (bazı servislerde frontend olabilir)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
