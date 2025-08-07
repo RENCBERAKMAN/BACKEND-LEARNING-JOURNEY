@@ -3,7 +3,7 @@
   <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-coding-web-development-flaticons-lineal-color-flat-icons.png" alt="Coding Icon" />
 </p>
 
-![Backend](https://img.shields.io/badge/backend-Express.js-blue?style=flat-square)
+![Backend](https://img.shields.io/badge/backend-Java-blue?style=flat-square)
 ![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)
 ![Version](https://img.shields.io/badge/version-0.1.0-lightgrey?style=flat-square)
 
@@ -18,10 +18,9 @@ My goal is to work with advanced architectures like microservices, and strengthe
 
 ## 🧰 Technologies Usedd
 
-- Node.js & Express.js  
-- MongoDB & Mongoose  
-- Postman  
-- VS Code  
+- Java ---Spring Boot 
+- PostgreSQL 
+- Docker  
 - Git & GitHub  
 
 
@@ -41,26 +40,17 @@ My goal is to work with advanced architectures like microservices, and strengthe
 
 ---
 
-## 🔧 Current Structure
 
-- Express server is up and running  
-- `/user` route serves test endpoints  
-- File structure is organized as: `route → controller → service → model`  
-- MongoDB connection is set up and data flow has been tested  
 
 ---
 
-## 🗺️ Planned Improvements
-
-- Full user system (create, read, delete)  
-- JWT-based login and role-based access  
-- Middleware for input validation and error handling  
-- Pagination, filtering, and sorting systems  
-- Microservice-ready modules: user, auth, blog, etc.  
-- Logging, error reporting, and testing setup  
-- Deployment setup and use of `.env` files  
-
----
+🗺️ Planned Improvements
+- Full user system (create, read, delete)
+- JWT-based login and role-based access control
+- Pagination, filtering, and sorting systems
+- Microservice-ready modules: user, authentication, blog, etc.
+- Logging, error reporting, and testing setup
+- Deployment configuration and use of .env files
 
 ## 📝 Note
 
